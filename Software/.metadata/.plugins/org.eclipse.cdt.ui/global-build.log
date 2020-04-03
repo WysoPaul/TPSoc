@@ -1,0 +1,31 @@
+12:00:53 **** Build of configuration Nios II for project MesgLum ****
+make all 
+Info: Building ../MesgLum_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../MesgLum_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../MesgLum_bsp//HAL/inc -I../MesgLum_bsp/ -I../MesgLum_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Compiling seg7driv.c to obj/default/seg7driv.o
+nios2-elf-gcc -xc -MP -MMD -c -I../MesgLum_bsp//HAL/inc -I../MesgLum_bsp/ -I../MesgLum_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/seg7driv.o seg7driv.c
+seg7driv.c: In function 'Test_Affiche_Config':
+seg7driv.c:24:4: warning: implicit declaration of function 'SEG7_Clear' [-Wimplicit-function-declaration]
+    SEG7_Clear(IP7SEG_BASE,6);
+    ^
+seg7driv.c: In function 'InitItBP1':
+seg7driv.c:56:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register( IP_BP1_IRQ, 0, irq_Affiche_Message);
+  ^
+Info: Linking MesgLum.elf
+nios2-elf-g++  -T'../MesgLum_bsp//linker.x' -msys-crt0='../MesgLum_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../MesgLum_bsp/   -Wl,-Map=MesgLum.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o MesgLum.elf obj/default/hello_world.o obj/default/seg7driv.o -lm -msys-lib=m
+nios2-elf-insert MesgLum.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name SysHdwTP --quartus_project_dir "C:/0DEPOTS/ENSEA/3DN_SocTP" --jdi ../..//output_files/TPSOC.jdi --sopcinfo C:/0DEPOTS/ENSEA/3DN_SocTP/Software/MesgLum_bsp/../../SysHdwTP.sopcinfo
+Info: (MesgLum.elf) 32 KBytes program size (code + initialized data).
+Info:               25 KBytes free for stack + heap.
+Info: Creating MesgLum.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source MesgLum.elf >MesgLum.objdump
+[MesgLum build complete]
+12:01:18 **** Incremental Build of configuration Nios II for project MesgLum ****
+make all 
+Info: Building ../MesgLum_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../MesgLum_bsp/
+[BSP build complete]
+[MesgLum build complete]

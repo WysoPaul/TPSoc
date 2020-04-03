@@ -1,0 +1,37 @@
+#include "unistd.h"
+#include <stdio.h>
+#include "io.h"
+#include "system.h"
+
+
+void Affiche_Config (int position, int numero_afficheur){
+	//HELLO 2019
+	unsigned char Texte[] = {0x76,0x79,0x38,0x38,0x3F,0x0,0x5B,0x3F,0x06,0x6F};
+	if( numero_afficheur < 6){
+		IOWR(IP7SEG_BASE, numero_afficheur, Texte[position]);
+	}
+}
+
+void Test_Affiche_Config(void){
+	int i, j, k;
+	i = j = k = 0;
+
+		for(k=17;k>0;k--)
+		{
+			j=0;
+			SEG7_Clear(IP7SEG_BASE,6);
+			for(i=k ; i>=0 ; i--){
+//				if(j>(10-1)){
+//					IOWR(IP7SEG_BASE, i, 0x0);
+//				}
+//				else
+//				{
+					Affiche_Config(j,i);
+		//		}
+				j++;
+				printf("+");
+			}
+			usleep(500000);
+			printf("-");
+		}
+}

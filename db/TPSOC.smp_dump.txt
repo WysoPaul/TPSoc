@@ -1,0 +1,9 @@
+
+State Machine - |HdwTPSoc|SysHdwTP:u0|SysHdwTP_NIOS:nios|SysHdwTP_NIOS_cpu:cpu|SysHdwTP_NIOS_cpu_nios2_oci:the_SysHdwTP_NIOS_cpu_nios2_oci|SysHdwTP_NIOS_cpu_debug_slave_wrapper:the_SysHdwTP_NIOS_cpu_debug_slave_wrapper|SysHdwTP_NIOS_cpu_debug_slave_tck:the_SysHdwTP_NIOS_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

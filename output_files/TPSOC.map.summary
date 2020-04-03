@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Mar 27 10:57:31 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : TPSOC
+Top-level Entity Name : HdwTPSoc
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 2051
+Total pins : 47
+Total virtual pins : 0
+Total block memory bits : 587,840
+Total DSP Blocks : 3
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

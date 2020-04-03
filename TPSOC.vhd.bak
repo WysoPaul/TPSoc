@@ -1,0 +1,44 @@
+----------------------------------------------------------------------------------
+-- Company: ENSEA
+-- Student: Paul Wysocki
+--
+-- Create Date:    20/03/20
+-- Design Name:
+-- Module Name:    
+-- Project Name: TP SoC
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_arith.ALL;
+use IEEE.STD_LOGIC_unsigned.ALL;
+    
+	 
+ENTITY HdwTPSoc IS
+  Port ( MonReset : in STD_LOGIC;
+         MaClock : in std_logic;
+			s7seg   : out std_logic_vector(47 downto 0)
+			);
+END HdwTPSoc;
+
+Architecture HdwTPSocArchi OF HdwTPSoc IS
+
+    component SysHdwTP is
+        port (
+            clk_clk       : in  std_logic                     := 'X'; -- clk
+            s7seg_export  : out std_logic_vector(47 downto 0);        -- export
+            reset_reset_n : in  std_logic                     := 'X'  -- reset_n
+        );
+    end component SysHdwTP;
+
+BEGIN
+	 
+	 
+    u0 : component SysHdwTP
+        port map (
+            clk_clk       => MaClock,  --   clk.clk
+            s7seg_export  => s7seg,		-- s7seg.export
+            reset_reset_n => MonReset  -- reset.reset_n
+        );
+
+END HdwTPSocArchi;

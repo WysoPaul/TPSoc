@@ -1,0 +1,18 @@
+17:32:29 **** Incremental Build of configuration Nios II for project Mesg2Lum ****
+make all 
+Info: Building ../Mesg2Lum_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Mesg2Lum_bsp/
+[BSP build complete]
+Info: Compiling seg7driv.c to obj/default/seg7driv.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Mesg2Lum_bsp//HAL/inc -I../Mesg2Lum_bsp/ -I../Mesg2Lum_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/seg7driv.o seg7driv.c
+Info: Linking Mesg2Lum.elf
+nios2-elf-g++  -T'../Mesg2Lum_bsp//linker.x' -msys-crt0='../Mesg2Lum_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Mesg2Lum_bsp/   -Wl,-Map=Mesg2Lum.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Mesg2Lum.elf obj/default/hello_world.o obj/default/seg7driv.o -lm -msys-lib=m
+nios2-elf-insert Mesg2Lum.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name SysHdwTP --quartus_project_dir "C:/0DEPOTS/ENSEA/3DN_SocTP" --jdi ../..//output_files/TPSOC.jdi --sopcinfo C:/0DEPOTS/ENSEA/3DN_SocTP/Software/Mesg2Lum_bsp/../../SysHdwTP.sopcinfo
+Info: (Mesg2Lum.elf) 31 KBytes program size (code + initialized data).
+Info:                25 KBytes free for stack + heap.
+Info: Creating Mesg2Lum.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Mesg2Lum.elf >Mesg2Lum.objdump
+[Mesg2Lum build complete]
+
+17:32:31 Build Finished (took 2s.36ms)
+
